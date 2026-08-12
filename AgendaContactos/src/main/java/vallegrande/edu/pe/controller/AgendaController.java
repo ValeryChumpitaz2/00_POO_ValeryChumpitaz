@@ -23,7 +23,7 @@ public class AgendaController {
     public void listarContactos(){
         System.out.println("LISTA DE CONTACTOS");
         for ( Contacto contacto : contactos){
-            mostrarContacto().contacto.mostrarContacto();
+            contacto.mostrarContacto();
         }
     }
 }

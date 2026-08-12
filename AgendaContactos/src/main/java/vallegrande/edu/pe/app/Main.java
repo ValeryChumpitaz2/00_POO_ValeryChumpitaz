@@ -11,7 +11,7 @@ public class Main {
         AngendaView view = new AngendaView();
 
         //Mostrar Informacion
-        view.mostrarTitulo();
+         view.mostrarTitulo();
 
         //Crear contactos
         Contacto contacto1 = new Contacto(
@@ -32,7 +32,7 @@ public class Main {
         );
         //Agregar contactos
          controller.agregarContacto(contacto1);
-         controller.agegarContacto(contacto2);
+         controller.agregarContacto(contacto2);
          //Listar Contactos
         controller.listarContactos();
     }
