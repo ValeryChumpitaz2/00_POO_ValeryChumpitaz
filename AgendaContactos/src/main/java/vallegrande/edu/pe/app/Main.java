@@ -7,7 +7,7 @@ import vallegrande.edu.pe.view.AngendaView;
 public class Main {
     public static void main(String[] args) {
         //Crear los componentes
-        AngendaController controller = new AgendaController();
+        AgendaController controller = new AgendaController();
         AngendaView view = new AngendaView();
 
         //Mostrar Informacion
