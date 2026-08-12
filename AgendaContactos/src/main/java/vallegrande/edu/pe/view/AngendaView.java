@@ -1,4 +1,4 @@
 package vallegrande.edu.pe.view;
 
-public class AgendaView {
+public class AngendaView {
 }
