@@ -11,8 +11,7 @@ public class Contacto {
     private String correo;
 
    //Constructor
-    public Contacto( int id, String nombres, String apellidos, String direccion,
-                     String telefono, String correo){
+    public Contacto( int id, String nombres, String apellidos, String direccion, String telefono, String correo){
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
