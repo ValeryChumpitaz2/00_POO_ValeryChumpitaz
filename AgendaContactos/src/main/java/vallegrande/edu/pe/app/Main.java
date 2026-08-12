@@ -30,10 +30,20 @@ public class Main {
                 "951264456",
                 "carlos@gmail.com"
         );
+        Contacto contacto3 = new Contacto(
+                3,
+                "Valery",
+                "Chumpitaz",
+                "Imperial",
+                "951264456",
+                "carlos@gmail.com"
+        );
         //Agregar contactos
          controller.agregarContacto(contacto1);
          controller.agregarContacto(contacto2);
-         //Listar Contactos
+        controller.agregarContacto(contacto3);
+
+        //Listar Contactos
         controller.listarContactos();
     }
 
