@@ -16,6 +16,19 @@ public class Libro {
         this.anio = anio;
     }
 
+    //GETTERS
+    public int getId(){
+        return id;
+    }
+    public String getTitulo(){
+        return titulo;
+    }
+    public String getAutor(){
+        return autor;
+    }
 
+    public int getAnio(){
+        return anio;
+    }
 
 }
