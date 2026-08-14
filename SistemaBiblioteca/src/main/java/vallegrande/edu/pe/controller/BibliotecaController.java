@@ -20,6 +20,17 @@ public class BibliotecaController {
         System.out.println("Libro registrado correctamente");
     }
 
+    //Listar
+    public void listarLibros(){
+        if(libros.isEmpty()){
+            System.out.println("No hay libros registrados");
+            return;
+        }
+        System.out.println("LISTA DE LIBROS");
+        for ( Libro libro: libros){
+            libro.mostrarLibro();
+        }
+    }
 
 
 }
