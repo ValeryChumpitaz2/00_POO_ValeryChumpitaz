@@ -31,4 +31,12 @@ public class Libro {
         return anio;
     }
 
+    //MOSTRAR LIBRO
+    public void mostrarLibro(){
+        System.out.println("ID: " + id);
+        System.out.println("Titulo: " + titulo);
+        System.out.println("Autor:" + autor);
+        System.out.println("Año: " + anio);
+        System.out.println("------------------------------------");
+    }
 }
