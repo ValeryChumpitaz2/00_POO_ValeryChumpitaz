@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Información principal del proyecto Maven -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+        https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Versión del modelo de Maven -->
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <!-- Identificación del proyecto -->
+    <groupId>vallegrande.edu.pe</groupId>
+    <artifactId>mi-perfil</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <!-- Configuración de Java -->
+    <properties>
+
+        <!-- Codificación de caracteres -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Versión de Java utilizada -->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+
+    </properties>
+
+
+
+
+    <!-- Dependencias que necesita nuestro proyecto -->
+    <dependencies>
+
+        <!-- JavaFX Controls: Button, Label, TextField, etc. -->
+        <dependency>
+
+            <groupId>org.openjfx</groupId>
+
+            <artifactId>javafx-controls</artifactId>
+
+            <version>17.0.13</version>
+
+        </dependency>
+
+    </dependencies>
+
+
+    <!-- Configuración de Maven -->
+    <build>
+
+        <plugins>
+
+            <!-- Plugin que permite ejecutar aplicaciones JavaFX -->
+            <plugin>
+
+                <groupId>org.openjfx</groupId>
+
+                <artifactId>javafx-maven-plugin</artifactId>
+
+                <version>0.0.8</version>
+
+
+                <configuration>
+
+                    <!-- Clase donde comienza nuestra aplicación -->
+                    <mainClass>com.ejemplo.Main</mainClass>
+
+                </configuration>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
+
