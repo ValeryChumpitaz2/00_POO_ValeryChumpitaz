@@ -10,14 +10,14 @@ public class MainController {
         configurarEventos();
     }
     private void configurarEventos(){
-        view.getBtnInicio().setAction(e-> {
+        view.getBtnInicio().setOnAction(e-> {
             view.mostrarInicio();
         });
 
-        view.getBtnUsuarios().setAction(e->{
+        view.getBtnUsuarios().setOnAction(e->{
             view.mostrarUsuarios();
         });
-        view.getBtnProductos().setAction(e->{
+        view.getBtnProductos().setOnAction(e->{
             view.mostrarProductos();
         });
     }

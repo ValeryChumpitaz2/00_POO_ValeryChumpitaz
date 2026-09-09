@@ -19,7 +19,7 @@ public class MainView extends BorderPane {
     }
     private void crearMenu(){
         VBox menu = new VBox(15);
-        menu.setPadding(Insets(25));
+        menu.setPadding( new Insets(25));
         menu.setPrefWidth(220);
         Label titulo = new Label("🖥️ MI SISTEMA");
         titulo.setStyle(
