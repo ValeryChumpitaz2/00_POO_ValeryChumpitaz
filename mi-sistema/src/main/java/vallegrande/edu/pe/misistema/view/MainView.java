@@ -5,6 +5,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class MainView extends BorderPane {
@@ -61,5 +62,65 @@ public class MainView extends BorderPane {
                 texto
         );
         setCenter(contenido);
+    }
+    public void mostrarUsuarios(){
+        VBox contenido = new VBox(20);
+        contenido.setPadding(new Insets(30));
+        Label titulo = new Label ("USUARIOS");
+        titulo.setStyle("-fx-font-size: 26px;" +
+                "-fx-font-weight: bold;");
+        HBox tarjetas = new HBox(15);
+        tarjetas.getChildren().addAll(
+                crearTarjeta("Carlos Perez", "Administrador"),
+                crearTarjeta("Maria Lopez", "Vendedora"),
+                crearTarjeta("Piero Ramos", "Supervisor")
+        );
+        contenido.getChildren().addAll(
+                titulo,
+                tarjetas
+        );
+        setCenter(contenido);
+    }
+    public void mostrarProductos(){
+        VBox contenido = new VBox(20);
+        contenido.setPadding(new Insets(30));
+        Label titulo = new Label("PRODUCTOS");
+        titulo.setStyle("-fx-font-size: 26px;" +
+                "-fx-font-weight: bold;");
+        HBox tarjetas = new HBox(15);
+        tarjetas.getChildren().addAll(
+                crearTarjeta("Laptop Lenovo", "S/ 2500"),
+                crearTarjeta("Mouse Logitech", "S/ 80"),
+                crearTarjeta("Teclado Mecánico", "S/ 180")
+                );
+        contenido.getChildren().addAll(
+                titulo,
+                tarjetas
+        );
+        setCenter(contenido);
+    }
+    private VBox crearTarjeta(String titulo, String detalle){
+        VBox tarjeta = new VBox(8);
+        tarjeta.setPadding(new Insets(20));
+        tarjeta.setPrefWidth(180);
+        tarjeta.setStyle("-fx-background-color: #EAF2FF;" +
+                "-fx-background-radius: 12;");
+        Label nombre = new Label(titulo);
+        nombre.setStyle("-fx-font-size: 16px;" + "-fx-font-weight: bold;");
+        Label info = new Label(detalle);
+        tarjeta.getChildren().addAll(
+                nombre,
+                info
+        );
+        return tarjeta;
+    }
+    public Button getBtnInicio(){
+        return btnInicio;
+    }
+    public Button getBtnUsuarios(){
+        return btnUsuarios;
+    }
+    public Button getBtnProductos(){
+        return btnProductos;
     }
 }
