@@ -10,7 +10,7 @@ public class MainController {
         configurarEventos();
     }
     private void configurarEventos(){
-        view.getBtnInicio().setOnAction(e-> {
+        view.getBt  nInicio().setOnAction(e-> {
             view.mostrarInicio();
         });
 
