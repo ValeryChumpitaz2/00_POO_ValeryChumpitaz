@@ -24,9 +24,21 @@ public class MainController {
            view.mostrarUsuarios();
            cargarUsuarios();
        });
+       view.getBtnRegistrar().setOnAction(e->{
+           registrarUsuario();
+       });
    }
     private void cargarUsuarios(){
         List<Usuario> usuarios = usuarioDAO.listar();
         view.mostrarDatosUsuarios(usuarios);
+    }
+    private void registrarUsuario(){
+       Usuario usuario = new Usuario();
+       usuario.setNombre(view.getNombre());
+       usuario.setApellido(view.getApellido());
+       usuario.setCorreo(view.getCorreo());
+       usuario.setEstado(view.getEstado());
+       usuarioDAO.insertar(usuario);
+       cargarUsuarios();
     }
 }
