@@ -27,6 +27,22 @@ public class MainController {
        view.getBtnRegistrar().setOnAction(e->{
            registrarUsuario();
        });
+
+       view.getBtnActualizar().setOnAction(e->{
+           actualizarUsuario();
+       });
+
+       view.getBtnEliminar().setOnAction(e-> {
+           eliminarUsuario();
+       });
+
+       view.getTablaUsuarios().setOnMouseClicked(e->{
+           Usuario usuario = view.getUsuarioSeleccionado();
+           if ( usuario != null){
+               view.cargarUsuarioEnFormulario(usuario);
+           }
+       } );
+
    }
     private void cargarUsuarios(){
         List<Usuario> usuarios = usuarioDAO.listar();
@@ -39,6 +55,27 @@ public class MainController {
        usuario.setCorreo(view.getCorreo());
        usuario.setEstado(view.getEstado());
        usuarioDAO.insertar(usuario);
+       cargarUsuarios();
+    }
+    private void actualizarUsuario(){
+       Usuario usuario = view.getUsuarioSeleccionado();
+       if ( usuario == null){
+           return;
+       }
+       usuario.setNombre(view.getNombre());
+       usuario.setApellido(view.getApellido());
+       usuario.setCorreo(view.getCorreo());
+       usuario.setEstado(view.getEstado());
+
+       usuarioDAO.actualizar(usuario);
+       cargarUsuarios();
+    }
+    private void eliminarUsuario(){
+       Usuario usuario = view.getUsuarioSeleccionado();
+       if ( usuario == null){
+           return;
+       }
+       usuarioDAO.eliminar(usuario.getId());
        cargarUsuarios();
     }
 }
